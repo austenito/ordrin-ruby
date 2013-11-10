@@ -13,9 +13,5 @@ describe OrdrIn::DeliveryList do
         restaurant.services.deliver.time.should == 45
       end
     end
-
-    context "401" do
-      it "raises UnauthorizedError"
-    end
   end
 end

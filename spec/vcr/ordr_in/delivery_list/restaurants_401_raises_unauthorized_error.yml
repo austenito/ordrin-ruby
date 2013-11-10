@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://r-test.ordr.in/dl/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=nyan cat, version=1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 10 Nov 2013 21:22:25 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '14'
+    body:
+      encoding: US-ASCII
+      string: File Not Found
+    http_version: 
+  recorded_at: Sun, 10 Nov 2013 21:22:28 GMT
+- request:
+    method: get
+    uri: https://r-test.ordr.in/dl/ASAP/77840/College%20Station/1%20Main%20Street
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=nyan cat, version=1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 10 Nov 2013 21:27:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '34'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"_err\": 1,\n  \"err_code\": 401\n}"
+    http_version: 
+  recorded_at: Sun, 10 Nov 2013 21:27:33 GMT
+recorded_with: VCR 2.7.0
