@@ -29,6 +29,7 @@ end
 
 require_relative "version"
 require_relative "ordrin/request"
+require_relative "ordrin/response"
 require_relative "ordrin/restaurant_request"
 require_relative "ordrin/delivery_list"
 require_relative "ordrin/restaurant"
