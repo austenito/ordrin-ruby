@@ -1,14 +1,15 @@
 module OrdrIn
-  class Restaurant
-    attr_accessor :model
+  class Restaurant < Model
+    attr_accessor :check
 
-    def initialize(attributes)
-      @model = Hashie::Mash.new(attributes)
+    def delivery_check(params)
+      self.check ||= OrdrIn::Delivery.check(id, params)
     end
 
-    def method_missing(method, *args)
-      return model.send(method, *args) if model.respond_to?(method)
-      super
+    def self.deliveries(params)
+      url = URI.escape("dl/#{params[:date_time]}/#{params[:zip_code]}/#{params[:city]}/#{params[:address]}")
+      response = OrdrIn::RestaurantRequest.get(url)
+      response.body.collect { |attributes| OrdrIn::Restaurant.new(attributes) }
     end
   end
 end

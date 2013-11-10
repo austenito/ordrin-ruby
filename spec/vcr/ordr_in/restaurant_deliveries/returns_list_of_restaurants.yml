@@ -1,0 +1,603 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://r-test.ordr.in/dl/ASAP/77840/College%20Station/1%20Main%20Street
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        bmdpbngvMS4wLjE1
+      !binary "RGF0ZQ==":
+      - !binary |-
+        U3VuLCAxMCBOb3YgMjAxMyAyMjo1MDowNyBHTVQ=
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOA==
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+      !binary "Q29ubmVjdGlvbg==":
+      - !binary |-
+        a2VlcC1hbGl2ZQ==
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        RXhwcmVzcw==
+    body:
+      encoding: UTF-8
+      string: ! "[\n  {\n    \"id\": 142,\n    \"na\": \"Cafe Eccell\",\n    \"cs_phone\":
+        \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n      \"name\":
+        \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Ice Cream\",\n      \"Seafood\",\n      \"Other\",\n      \"Salad\"\n
+        \   ],\n    \"addr\": \"101 Church Ave, College Station, TX\",\n    \"full_addr\":
+        {\n      \"addr\": \"101 Church Ave\",\n      \"addr2\": \"\",\n      \"city\":
+        \"College Station\",\n      \"state\": \"TX\",\n      \"postal_code\": \"77840-1215\"\n
+        \   },\n    \"city\": \"College Station\",\n    \"latitude\": 30.61688,\n
+        \   \"longitude\": -96.348991,\n    \"del\": 45,\n    \"mino\": 15,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 147,\n    \"na\": \"La Bodega Baja Taco Bar\",\n
+        \   \"cs_phone\": \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n
+        \     \"name\": \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"American\",\n      \"Catering\",\n      \"Mexican\",\n      \"Salad\"\n
+        \   ],\n    \"addr\": \"102 Church Ave, College Station, TX\",\n    \"full_addr\":
+        {\n      \"addr\": \"102 Church Ave\",\n      \"addr2\": \"\",\n      \"city\":
+        \"College Station\",\n      \"state\": \"TX\",\n      \"postal_code\": \"77840-1216\"\n
+        \   },\n    \"city\": \"College Station\",\n    \"latitude\": 30.61697,\n
+        \   \"longitude\": -96.348892,\n    \"del\": 45,\n    \"mino\": 15,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 5097,\n    \"na\": \"Genghis Grill\",\n    \"cs_phone\":
+        \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n      \"name\":
+        \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Asian\",\n      \"Barbecue\",\n      \"Chinese\",\n      \"Catering\",\n
+        \     \"Healthy\",\n      \"Ice Cream\",\n      \"Seafood\",\n      \"Thai\",\n
+        \     \"Vegetarian\",\n      \"Vietnamese\"\n    ],\n    \"addr\": \"700 University
+        Dr, College Station, TX\",\n    \"full_addr\": {\n      \"addr\": \"700 University
+        Dr\",\n      \"addr2\": \"\",\n      \"city\": \"College Station\",\n      \"state\":
+        \"TX\",\n      \"postal_code\": \"77840\"\n    },\n    \"city\": \"College
+        Station\",\n    \"latitude\": 30.62017,\n    \"longitude\": -96.34324,\n    \"del\":
+        45,\n    \"mino\": 15,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 5098,\n
+        \   \"na\": \"Applebee's\",\n    \"cs_phone\": \"888-220-5126\",\n    \"rds_info\":
+        {\n      \"id\": 100,\n      \"name\": \"FoodFriendz\",\n      \"logo\": \"\"\n
+        \   },\n    \"services\": {\n      \"deliver\": {\n        \"time\": 45,\n
+        \       \"mino\": 15,\n        \"can\": 1\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n      \"Barbecue\",\n
+        \     \"Catering\",\n      \"Healthy\",\n      \"Ice Cream\",\n      \"Italian\",\n
+        \     \"Sandwiches\",\n      \"Seafood\",\n      \"Steak\",\n      \"Corporate
+        Gifts\",\n      \"Salad\"\n    ],\n    \"addr\": \"200 S Texas Ave, College
+        Station, Tx\",\n    \"full_addr\": {\n      \"addr\": \"200 S Texas Ave\",\n
+        \     \"addr2\": \"\",\n      \"city\": \"College Station\",\n      \"state\":
+        \"Tx\",\n      \"postal_code\": \"77840\"\n    },\n    \"city\": \"College
+        Station\",\n    \"del\": 45,\n    \"mino\": 15,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 10254,\n    \"na\": \"The Green Bar McAllen\",\n    \"cs_phone\":
+        \"646-801-6659\",\n    \"rds_info\": {\n      \"id\": 182,\n      \"name\":
+        \"Ordr.in\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 6.55,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Breakfast\",\n
+        \     \"Vegetarian\"\n    ],\n    \"addr\": \"710 S Dfw Dr, Edinburg, TX\",\n
+        \   \"full_addr\": {\n      \"addr\": \"710 S Dfw Dr\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Edinburg\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"78539-0964\"\n    },\n    \"city\": \"Edinburg\",\n    \"del\": 30,\n    \"mino\":
+        6.55,\n    \"is_delivering\": 0\n  },\n  {\n    \"id\": 10357,\n    \"na\":
+        \"Brooks' Place\",\n    \"cs_phone\": \"646-801-6659\",\n    \"rds_info\":
+        {\n      \"id\": 182,\n      \"name\": \"Ordr.in\",\n      \"logo\": \"\"\n
+        \   },\n    \"services\": {\n      \"deliver\": {\n        \"time\": 30,\n
+        \       \"mino\": 0,\n        \"can\": 1\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n      \"Barbecue\",\n
+        \     \"Chicken\"\n    ],\n    \"addr\": \"18020 FM-529, Cypress, TX\",\n
+        \   \"full_addr\": {\n      \"addr\": \"18020 FM-529\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Cypress\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"77433\"\n    },\n    \"city\": \"Cypress\",\n    \"latitude\": 29.88,\n
+        \   \"longitude\": -95.683693,\n    \"del\": 30,\n    \"mino\": 0,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 12607,\n    \"na\": \"LannaThai Cuisine\",\n    \"cs_phone\":
+        \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n      \"name\":
+        \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Asian\",\n
+        \     \"Catering\",\n      \"Healthy\",\n      \"Ice Cream\",\n      \"Seafood\",\n
+        \     \"Thai\",\n      \"Vegetarian\",\n      \"Salad\"\n    ],\n    \"addr\":
+        \"3700 S Texas Ave, Bryan, TX\",\n    \"full_addr\": {\n      \"addr\": \"3700
+        S Texas Ave\",\n      \"addr2\": \"\",\n      \"city\": \"Bryan\",\n      \"state\":
+        \"TX\",\n      \"postal_code\": \"77802-3756\"\n    },\n    \"city\": \"Bryan\",\n
+        \   \"del\": 45,\n    \"mino\": 15,\n    \"is_delivering\": 1\n  },\n  {\n
+        \   \"id\": 12701,\n    \"na\": \"Finger Licking Restaurant\",\n    \"cs_phone\":
+        \"646-801-6659\",\n    \"rds_info\": {\n      \"id\": 182,\n      \"name\":
+        \"Ordr.in\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 0,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"African\"\n
+        \   ],\n    \"addr\": \"9811 Bissonnet St, Houston, TX\",\n    \"full_addr\":
+        {\n      \"addr\": \"9811 Bissonnet St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Houston\",\n      \"state\": \"TX\",\n      \"postal_code\": \"77036-8201\"\n
+        \   },\n    \"city\": \"Houston\",\n    \"latitude\": 29.675211,\n    \"longitude\":
+        -95.55088,\n    \"del\": 45,\n    \"mino\": 0,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 23799,\n    \"na\": \"Carter's Burger\",\n    \"cs_phone\":
+        \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n      \"name\":
+        \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Catering\",\n      \"Ice Cream\",\n      \"Sandwiches\",\n      \"Vegetarian\",\n
+        \     \"Salad\"\n    ],\n    \"addr\": \"3105 S Texas Ave, Bryan, TX\",\n
+        \   \"full_addr\": {\n      \"addr\": \"3105 S Texas Ave\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Bryan\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"77802-3124\"\n    },\n    \"city\": \"Bryan\",\n    \"latitude\": 30.642795,\n
+        \   \"longitude\": -96.352557,\n    \"del\": 45,\n    \"mino\": 15,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 23831,\n    \"na\": \"Sandholler Sweets & Eats\",\n
+        \   \"cs_phone\": \"646-801-6659\",\n    \"rds_info\": {\n      \"id\": 182,\n
+        \     \"name\": \"Ordr.in\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 45,\n        \"mino\": 10,\n        \"can\":
+        0\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Bakery\"\n    ],\n    \"addr\": \"3349 Sand Holler Rd, Dale, TX\",\n
+        \   \"full_addr\": {\n      \"addr\": \"3349 Sand Holler Rd\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Dale\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"78616-2474\"\n    },\n    \"city\": \"Dale\",\n    \"latitude\": 29.92844,\n
+        \   \"longitude\": -97.563972,\n    \"del\": 45,\n    \"mino\": 10,\n    \"is_delivering\":
+        0\n  },\n  {\n    \"id\": 23948,\n    \"na\": \"3 Fortunes Chinese Restaurant\",\n
+        \   \"cs_phone\": \"781-891-8899\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 20,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Chinese\"\n    ],\n    \"addr\": \"179 Willow St, Waltham, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"179 Willow St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Waltham\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02453-8330\"\n    },\n    \"city\": \"Waltham\",\n    \"latitude\": 42.371446,\n
+        \   \"longitude\": -71.220393,\n    \"del\": 30,\n    \"mino\": 20,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 24027,\n    \"na\": \"Lily's Kitchen\",\n    \"cs_phone\":
+        \"781-647-0300\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Chinese\",\n
+        \     \"Seafood\",\n      \"Southern\"\n    ],\n    \"addr\": \"54 River St,
+        Waltham, MA\",\n    \"full_addr\": {\n      \"addr\": \"54 River St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Waltham\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02453-8306\"\n    },\n    \"city\": \"Waltham\",\n    \"latitude\": 42.369056,\n
+        \   \"longitude\": -71.219077,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 24164,\n    \"na\": \"Aegean\",\n    \"cs_phone\":
+        \"617-779-8600\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Greek\"\n
+        \   ],\n    \"addr\": \"640 Arsenal St, Watertown, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"640 Arsenal St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Watertown\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02472-2851\"\n
+        \   },\n    \"city\": \"Watertown\",\n    \"latitude\": 42.362188,\n    \"longitude\":
+        -71.151159,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 24650,\n    \"na\": \"Shiraz Cuisine\",\n    \"cs_phone\":
+        \"617-779-8600\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 20,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Middle
+        Eastern\"\n    ],\n    \"addr\": \"72 Bigelow Ave, Watertown, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"72 Bigelow Ave\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Watertown\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02472-2012\"\n
+        \   },\n    \"city\": \"Watertown\",\n    \"latitude\": 42.368884,\n    \"longitude\":
+        -71.157421,\n    \"del\": 30,\n    \"mino\": 20,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 24953,\n    \"na\": \"Boston Central Kitchen Express\",\n
+        \   \"cs_phone\": \"617-268-0106\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 20,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"American\"\n    ],\n    \"addr\": \"28 Damrell St, Boston, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"28 Damrell St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Boston\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02127-2737\"\n    },\n    \"city\": \"Boston\",\n    \"latitude\": 42.332959,\n
+        \   \"longitude\": -71.055605,\n    \"del\": 30,\n    \"mino\": 20,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 26214,\n    \"na\": \"Chutney's\",\n    \"cs_phone\":
+        \"617-779-8600\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 25,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Indian\"\n
+        \   ],\n    \"addr\": \"36 JFK St, Cambridge, MA\",\n    \"full_addr\": {\n
+        \     \"addr\": \"36 JFK St\",\n      \"addr2\": \"\",\n      \"city\": \"Cambridge\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02138-4934\"\n    },\n
+        \   \"city\": \"Cambridge\",\n    \"latitude\": 42.372533,\n    \"longitude\":
+        -71.120167,\n    \"del\": 30,\n    \"mino\": 25,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 27746,\n    \"na\": \"A@Time\",\n    \"cs_phone\":
+        \"617-202-5840\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 5,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Asian\",\n
+        \     \"Thai\",\n      \"Vegetarian\"\n    ],\n    \"addr\": \"433 Cambridge
+        St, Allston, MA\",\n    \"full_addr\": {\n      \"addr\": \"433 Cambridge
+        St\",\n      \"addr2\": \"\",\n      \"city\": \"Allston\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02134-1788\"\n    },\n    \"city\": \"Allston\",\n
+        \   \"latitude\": 42.355292,\n    \"longitude\": -71.133627,\n    \"del\":
+        30,\n    \"mino\": 5,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 28139,\n
+        \   \"na\": \"24 Hours Pizza Delivery\",\n    \"cs_phone\": \"617-966-6674\",\n
+        \   \"rds_info\": {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n
+        \     \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n
+        \       \"time\": 30,\n        \"mino\": 29.9,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Greek\",\n      \"Italian\",\n      \"Pizza\"\n    ],\n    \"addr\":
+        \"686 Morton St, Boston, MA\",\n    \"full_addr\": {\n      \"addr\": \"686
+        Morton St\",\n      \"addr2\": \"\",\n      \"city\": \"Boston\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02126-1571\"\n    },\n    \"city\": \"Boston\",\n
+        \   \"latitude\": 42.284722,\n    \"longitude\": -71.092094,\n    \"del\":
+        30,\n    \"mino\": 29.9,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\":
+        28634,\n    \"na\": \"Bon Chon (Harvard Square)\",\n    \"cs_phone\": \"617-779-8600\",\n
+        \   \"rds_info\": {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n
+        \     \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n
+        \       \"time\": 30,\n        \"mino\": 25,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Korean\",\n
+        \     \"Wings\"\n    ],\n    \"addr\": \"57 JFK St, Cambridge, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"57 JFK St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Cambridge\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02138-4931\"\n
+        \   },\n    \"city\": \"Cambridge\",\n    \"latitude\": 42.372016,\n    \"longitude\":
+        -71.120663,\n    \"del\": 30,\n    \"mino\": 25,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29238,\n    \"na\": \"Punjab Palace\",\n    \"cs_phone\":
+        \"617-254-1500\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 25,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Indian\"\n
+        \   ],\n    \"addr\": \"109 Brighton Ave, Allston, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"109 Brighton Ave\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Allston\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02134-2802\"\n
+        \   },\n    \"city\": \"Allston\",\n    \"latitude\": 42.353059,\n    \"longitude\":
+        -71.131025,\n    \"del\": 30,\n    \"mino\": 25,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29315,\n    \"na\": \"First Bite Pizza\",\n    \"cs_phone\":
+        \"617-782-2228\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n
+        \     \"Pizza\"\n    ],\n    \"addr\": \"76 Brighton Ave, Allston, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"76 Brighton Ave\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Allston\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02134-2101\"\n    },\n    \"city\": \"Allston\",\n    \"latitude\": 42.352421,\n
+        \   \"longitude\": -71.128609,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29334,\n    \"na\": \"Mass Chicken\",\n    \"cs_phone\":
+        \"617-234-4450\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Fast Food\"\n    ],\n    \"addr\": \"736 Massachusetts Ave, Cambridge,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"736 Massachusetts Ave\",\n
+        \     \"addr2\": \"\",\n      \"city\": \"Cambridge\",\n      \"state\": \"MA\",\n
+        \     \"postal_code\": \"02139-3308\"\n    },\n    \"city\": \"Cambridge\",\n
+        \   \"latitude\": 42.36592,\n    \"longitude\": -71.104611,\n    \"del\":
+        30,\n    \"mino\": 15,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29351,\n
+        \   \"na\": \"Jasmine House of Kebab\",\n    \"cs_phone\": \"617-923-2999\",\n
+        \   \"rds_info\": {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n
+        \     \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n
+        \       \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Mediterranean\",\n
+        \     \"Middle Eastern\"\n    ],\n    \"addr\": \"580 Mt Auburn St, Watertown,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"580 Mt Auburn St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Watertown\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02472-4124\"\n    },\n    \"city\": \"Watertown\",\n    \"latitude\": 42.37083,\n
+        \   \"longitude\": -71.158807,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29354,\n    \"na\": \"Sabatino's Italian Kitchen\",\n
+        \   \"cs_phone\": \"617-787-9393\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 5,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Italian\",\n      \"Pizza\"\n    ],\n    \"addr\": \"1443 Commonwealth
+        Ave, Brighton, MA\",\n    \"full_addr\": {\n      \"addr\": \"1443 Commonwealth
+        Ave\",\n      \"addr2\": \"\",\n      \"city\": \"Brighton\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02135-6105\"\n    },\n    \"city\": \"Brighton\",\n
+        \   \"latitude\": 42.34887,\n    \"longitude\": -71.140312,\n    \"del\":
+        30,\n    \"mino\": 5,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29386,\n
+        \   \"na\": \"O-Sha\",\n    \"cs_phone\": \"617-923-0123\",\n    \"rds_info\":
+        {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n      \"logo\":
+        \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n        \"time\":
+        30,\n        \"mino\": 15,\n        \"can\": 0\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Thai\"\n    ],\n    \"addr\":
+        \"356 Arsenal St, Watertown, MA\",\n    \"full_addr\": {\n      \"addr\":
+        \"356 Arsenal St\",\n      \"addr2\": \"\",\n      \"city\": \"Watertown\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02472-2892\"\n    },\n
+        \   \"city\": \"Watertown\",\n    \"latitude\": 42.363649,\n    \"longitude\":
+        -71.164839,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29387,\n    \"na\": \"Super Fusion Cuisine II\",\n
+        \   \"cs_phone\": \"617-393-0008\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Asian\",\n      \"Sushi\"\n    ],\n    \"addr\": \"54 Mt Auburn
+        St, Watertown, MA\",\n    \"full_addr\": {\n      \"addr\": \"54 Mt Auburn
+        St\",\n      \"addr2\": \"\",\n      \"city\": \"Watertown\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02472-3929\"\n    },\n    \"city\": \"Watertown\",\n
+        \   \"latitude\": 42.366119,\n    \"longitude\": -71.182551,\n    \"del\":
+        30,\n    \"mino\": 15,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29471,\n
+        \   \"na\": \"ABC Pizza House\",\n    \"cs_phone\": \"617-876-4607\",\n    \"rds_info\":
+        {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n      \"logo\":
+        \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n        \"time\":
+        30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n      \"Pizza\"\n
+        \   ],\n    \"addr\": \"744 Massachusetts Ave, Cambridge, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"744 Massachusetts Ave\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Cambridge\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02139-3308\"\n
+        \   },\n    \"city\": \"Cambridge\",\n    \"latitude\": 42.365905,\n    \"longitude\":
+        -71.104598,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29489,\n    \"na\": \"Noodle Stix\",\n    \"cs_phone\":
+        \"617-868-1800\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Chinese\"\n
+        \   ],\n    \"addr\": \"11 Belmont St, Cambridge, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"11 Belmont St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Cambridge\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02138-4404\"\n
+        \   },\n    \"city\": \"Cambridge\",\n    \"latitude\": 42.3749,\n    \"longitude\":
+        -71.150733,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29512,\n    \"na\": \"Sweet Pepper\",\n    \"cs_phone\":
+        \"617-779-7229\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Asian\",\n
+        \     \"Healthy\",\n      \"Thai\",\n      \"Vegetarian\"\n    ],\n    \"addr\":
+        \"559 Washington St, Brighton, MA\",\n    \"full_addr\": {\n      \"addr\":
+        \"559 Washington St\",\n      \"addr2\": \"\",\n      \"city\": \"Brighton\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02135-2528\"\n    },\n
+        \   \"city\": \"Brighton\",\n    \"latitude\": 42.349912,\n    \"longitude\":
+        -71.164415,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29513,\n    \"na\": \"Asahi Japanese Sushi\",\n    \"cs_phone\":
+        \"617-562-6333\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Sushi\"\n
+        \   ],\n    \"addr\": \"418 Market St, Brighton, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"418 Market St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Brighton\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02135-2707\"\n
+        \   },\n    \"city\": \"Brighton\",\n    \"latitude\": 42.349545,\n    \"longitude\":
+        -71.153305,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29518,\n    \"na\": \"Little Pizza King\",\n    \"cs_phone\":
+        \"617-787-7800\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 8,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n
+        \     \"Pizza\"\n    ],\n    \"addr\": \"389 Washington St, Brighton, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"389 Washington St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Brighton\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02135-2731\"\n    },\n    \"city\": \"Brighton\",\n    \"latitude\": 42.349125,\n
+        \   \"longitude\": -71.155286,\n    \"del\": 30,\n    \"mino\": 8,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29562,\n    \"na\": \"Kamiza Japanese Cuisine\",\n
+        \   \"cs_phone\": \"617-731-6700\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Sushi\"\n    ],\n    \"addr\": \"696 Washington St, Brookline,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"696 Washington St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Brookline\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02446-4564\"\n    },\n    \"city\": \"Brookline\",\n    \"latitude\": 42.338686,\n
+        \   \"longitude\": -71.133896,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29570,\n    \"na\": \"Ginger Root of Newton\",\n
+        \   \"cs_phone\": \"617-928-3337\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 12,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Asian\",\n      \"Chinese\"\n    ],\n    \"addr\": \"136 Adams
+        St, Newton, MA\",\n    \"full_addr\": {\n      \"addr\": \"136 Adams St\",\n
+        \     \"addr2\": \"\",\n      \"city\": \"Newton\",\n      \"state\": \"MA\",\n
+        \     \"postal_code\": \"02458-1210\"\n    },\n    \"city\": \"Newton\",\n
+        \   \"latitude\": 42.359646,\n    \"longitude\": -71.20188,\n    \"del\":
+        30,\n    \"mino\": 12,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29617,\n
+        \   \"na\": \"Pic a Pasta\",\n    \"cs_phone\": \"617-789-4555\",\n    \"rds_info\":
+        {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n      \"logo\":
+        \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n        \"time\":
+        30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n      \"Pizza\",\n
+        \     \"Sandwiches\"\n    ],\n    \"addr\": \"600 Washington St, Brighton,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"600 Washington St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Brighton\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02135-2548\"\n    },\n    \"city\": \"Brighton\",\n    \"latitude\": 42.350533,\n
+        \   \"longitude\": -71.167685,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29638,\n    \"na\": \"C & N Pizza\",\n    \"cs_phone\":
+        \"617-244-5150\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n
+        \     \"Pizza\",\n      \"Sandwiches\"\n    ],\n    \"addr\": \"437 Centre
+        St, Newton, MA\",\n    \"full_addr\": {\n      \"addr\": \"437 Centre St\",\n
+        \     \"addr2\": \"\",\n      \"city\": \"Newton\",\n      \"state\": \"MA\",\n
+        \     \"postal_code\": \"02458-2063\"\n    },\n    \"city\": \"Newton\",\n
+        \   \"latitude\": 42.35539,\n    \"longitude\": -71.186189,\n    \"del\":
+        30,\n    \"mino\": 15,\n    \"is_delivering\": 0\n  },\n  {\n    \"id\": 29664,\n
+        \   \"na\": \"Athens Pizza & Grille\",\n    \"cs_phone\": \"617-923-8222\",\n
+        \   \"rds_info\": {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n
+        \     \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n
+        \       \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Burgers\",\n
+        \     \"Italian\",\n      \"Pizza\",\n      \"Sandwiches\"\n    ],\n    \"addr\":
+        \"2 Watertown St, Watertown, MA\",\n    \"full_addr\": {\n      \"addr\":
+        \"2 Watertown St\",\n      \"addr2\": \"\",\n      \"city\": \"Watertown\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02472-2573\"\n    },\n
+        \   \"city\": \"Watertown\",\n    \"latitude\": 42.364449,\n    \"longitude\":
+        -71.187156,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29754,\n    \"na\": \"AnyTime Pizza\",\n    \"cs_phone\":
+        \"617-500-4567\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Burgers\",\n
+        \     \"Pizza\",\n      \"Sandwiches\"\n    ],\n    \"addr\": \"212 Western
+        Ave, Cambridge, MA\",\n    \"full_addr\": {\n      \"addr\": \"212 Western
+        Ave\",\n      \"addr2\": \"\",\n      \"city\": \"Cambridge\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02139-3729\"\n    },\n    \"city\": \"Cambridge\",\n
+        \   \"latitude\": 42.3647,\n    \"longitude\": -71.110315,\n    \"del\": 30,\n
+        \   \"mino\": 10,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29794,\n
+        \   \"na\": \"Joyful Garden\",\n    \"cs_phone\": \"617-787-8818\",\n    \"rds_info\":
+        {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n      \"logo\":
+        \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n        \"time\":
+        30,\n        \"mino\": 5,\n        \"can\": 1\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Thai\"\n    ],\n    \"addr\":
+        \"1234 Soldiers Field Rd, Brighton, MA\",\n    \"full_addr\": {\n      \"addr\":
+        \"1234 Soldiers Field Rd\",\n      \"addr2\": \"\",\n      \"city\": \"Brighton\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02135-1002\"\n    },\n
+        \   \"city\": \"Brighton\",\n    \"latitude\": 42.36414,\n    \"longitude\":
+        -71.136881,\n    \"del\": 30,\n    \"mino\": 5,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29795,\n    \"na\": \"New Hong Kong\",\n    \"cs_phone\":
+        \"617-783-3236\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 5,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Chinese\"\n
+        \   ],\n    \"addr\": \"14 Tremont St, Brighton, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"14 Tremont St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Brighton\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02135-2407\"\n
+        \   },\n    \"city\": \"Brighton\",\n    \"latitude\": 42.350133,\n    \"longitude\":
+        -71.169318,\n    \"del\": 30,\n    \"mino\": 5,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29798,\n    \"na\": \"The Proper Slice\",\n    \"cs_phone\":
+        \"617-789-4889\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n
+        \     \"Pizza\"\n    ],\n    \"addr\": \"547 Washington St, Brighton, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"547 Washington St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Brighton\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02135-2527\"\n    },\n    \"city\": \"Brighton\",\n    \"latitude\": 42.349391,\n
+        \   \"longitude\": -71.163611,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 29880,\n    \"na\": \"Boston House of Pizza\",\n
+        \   \"cs_phone\": \"617-924-2467\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 8,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Italian\",\n      \"Pizza\"\n    ],\n    \"addr\": \"115 Galen
+        St, Watertown, MA\",\n    \"full_addr\": {\n      \"addr\": \"115 Galen St\",\n
+        \     \"addr2\": \"\",\n      \"city\": \"Watertown\",\n      \"state\": \"MA\",\n
+        \     \"postal_code\": \"02472-4506\"\n    },\n    \"city\": \"Watertown\",\n
+        \   \"latitude\": 42.361203,\n    \"longitude\": -71.185632,\n    \"del\":
+        30,\n    \"mino\": 8,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 29930,\n
+        \   \"na\": \"ANI American & Middle Eastern Cuisine\",\n    \"cs_phone\":
+        \"617-484-6161\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 20,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Indian\"\n
+        \   ],\n    \"addr\": \"687 Belmont St, Belmont, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"687 Belmont St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Belmont\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02478-4401\"\n
+        \   },\n    \"city\": \"Belmont\",\n    \"latitude\": 42.380285,\n    \"longitude\":
+        -71.181717,\n    \"del\": 30,\n    \"mino\": 20,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29931,\n    \"na\": \"9 Tastes Thai Cuisine\",\n    \"cs_phone\":
+        \"617-547-6666\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Seafood\",\n
+        \     \"Thai\"\n    ],\n    \"addr\": \"50 JFK St, Cambridge, MA\",\n    \"full_addr\":
+        {\n      \"addr\": \"50 JFK St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Cambridge\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02138-4933\"\n
+        \   },\n    \"city\": \"Cambridge\",\n    \"latitude\": 42.372074,\n    \"longitude\":
+        -71.120422,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 29933,\n    \"na\": \"Bombay Mahal\",\n    \"cs_phone\":
+        \"781-893-9988\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 20,\n        \"can\": 0\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Indian\"\n
+        \   ],\n    \"addr\": \"458 Moody St, Waltham, MA\",\n    \"full_addr\": {\n
+        \     \"addr\": \"458 Moody St\",\n      \"addr2\": \"\",\n      \"city\":
+        \"Waltham\",\n      \"state\": \"MA\",\n      \"postal_code\": \"02453-0415\"\n
+        \   },\n    \"city\": \"Waltham\",\n    \"latitude\": 42.368163,\n    \"longitude\":
+        -71.237424,\n    \"del\": 45,\n    \"mino\": 20,\n    \"is_delivering\": 0\n
+        \ },\n  {\n    \"id\": 29937,\n    \"na\": \"Thyago's Pizza\",\n    \"cs_phone\":
+        \"617-484-3663\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 8,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Italian\",\n
+        \     \"Pizza\"\n    ],\n    \"addr\": \"368 Trapelo Rd, Belmont, MA\",\n
+        \   \"full_addr\": {\n      \"addr\": \"368 Trapelo Rd\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Belmont\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02478-1957\"\n    },\n    \"city\": \"Belmont\",\n    \"latitude\": 42.385842,\n
+        \   \"longitude\": -71.185003,\n    \"del\": 30,\n    \"mino\": 8,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 30125,\n    \"na\": \"Beat Da Wrap\",\n    \"cs_phone\":
+        \"781-788-9272\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Pizza\",\n
+        \     \"Sandwiches\"\n    ],\n    \"addr\": \"411 Waverley Oaks Rd, Waltham,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"411 Waverley Oaks Rd\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Waltham\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02452-8405\"\n    },\n    \"city\": \"Waltham\",\n    \"latitude\": 42.387232,\n
+        \   \"longitude\": -71.203084,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 30166,\n    \"na\": \"West Newton Pizza & Grill\",\n
+        \   \"cs_phone\": \"617-964-0016\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 8,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Italian\",\n      \"Pizza\"\n    ],\n    \"addr\": \"1288 Washington
+        St, West Newton, MA\",\n    \"full_addr\": {\n      \"addr\": \"1288 Washington
+        St\",\n      \"addr2\": \"\",\n      \"city\": \"West Newton\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02465-2001\"\n    },\n    \"city\": \"West
+        Newton\",\n    \"latitude\": 42.349326,\n    \"longitude\": -71.22599,\n    \"del\":
+        30,\n    \"mino\": 8,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 30326,\n
+        \   \"na\": \"Buccieri's Cafe\",\n    \"cs_phone\": \"617-330-5355\",\n    \"rds_info\":
+        {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n      \"logo\":
+        \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n        \"time\":
+        30,\n        \"mino\": 250,\n        \"can\": 0\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n      \"Coffee
+        House\",\n      \"Healthy\",\n      \"Sandwiches\"\n    ],\n    \"addr\":
+        \"260 Franklin St, Boston, MA\",\n    \"full_addr\": {\n      \"addr\": \"260
+        Franklin St\",\n      \"addr2\": \"\",\n      \"city\": \"Boston\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02110-3117\"\n    },\n    \"city\": \"Boston\",\n
+        \   \"latitude\": 42.356774,\n    \"longitude\": -71.053952,\n    \"del\":
+        30,\n    \"mino\": 250,\n    \"is_delivering\": 0\n  },\n  {\n    \"id\":
+        30685,\n    \"na\": \"Wise Guys Pasta, Panini and Grill\",\n    \"cs_phone\":
+        \"617-783-8787\",\n    \"rds_info\": {\n      \"id\": 186,\n      \"name\":
+        \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 30,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Ice Cream\",\n      \"Italian\",\n      \"Sandwiches\"\n    ],\n    \"addr\":
+        \"172 Brighton Ave, Allston, MA\",\n    \"full_addr\": {\n      \"addr\":
+        \"172 Brighton Ave\",\n      \"addr2\": \"\",\n      \"city\": \"Allston\",\n
+        \     \"state\": \"MA\",\n      \"postal_code\": \"02134-2011\"\n    },\n
+        \   \"city\": \"Allston\",\n    \"latitude\": 42.352886,\n    \"longitude\":
+        -71.132431,\n    \"del\": 30,\n    \"mino\": 15,\n    \"is_delivering\": 1\n
+        \ },\n  {\n    \"id\": 30800,\n    \"na\": \"Fiorella's Express-Belmont\",\n
+        \   \"cs_phone\": \"617-489-1361\",\n    \"rds_info\": {\n      \"id\": 186,\n
+        \     \"name\": \"delivery.com\",\n      \"logo\": \"\"\n    },\n    \"services\":
+        {\n      \"deliver\": {\n        \"time\": 30,\n        \"mino\": 10,\n        \"can\":
+        1\n      }\n    },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\":
+        [\n      \"Italian\",\n      \"Pizza\",\n      \"Sandwiches\"\n    ],\n    \"addr\":
+        \"263 Belmont St, Belmont, MA\",\n    \"full_addr\": {\n      \"addr\": \"263
+        Belmont St\",\n      \"addr2\": \"\",\n      \"city\": \"Belmont\",\n      \"state\":
+        \"MA\",\n      \"postal_code\": \"02478-3749\"\n    },\n    \"city\": \"Belmont\",\n
+        \   \"latitude\": 42.376953,\n    \"longitude\": -71.162222,\n    \"del\":
+        30,\n    \"mino\": 10,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 31369,\n
+        \   \"na\": \"Fordee's Falafel & Deli\",\n    \"cs_phone\": \"617-923-3673\",\n
+        \   \"rds_info\": {\n      \"id\": 186,\n      \"name\": \"delivery.com\",\n
+        \     \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\": {\n
+        \       \"time\": 30,\n        \"mino\": 10,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"Burgers\",\n
+        \     \"Middle Eastern\"\n    ],\n    \"addr\": \"555 Mt Auburn St, Watertown,
+        MA\",\n    \"full_addr\": {\n      \"addr\": \"555 Mt Auburn St\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Watertown\",\n      \"state\": \"MA\",\n      \"postal_code\":
+        \"02472-4102\"\n    },\n    \"city\": \"Watertown\",\n    \"latitude\": 42.370342,\n
+        \   \"longitude\": -71.159731,\n    \"del\": 30,\n    \"mino\": 10,\n    \"is_delivering\":
+        1\n  },\n  {\n    \"id\": 31817,\n    \"na\": \"On The Border\",\n    \"cs_phone\":
+        \"888-220-5126\",\n    \"rds_info\": {\n      \"id\": 100,\n      \"name\":
+        \"FoodFriendz\",\n      \"logo\": \"\"\n    },\n    \"services\": {\n      \"deliver\":
+        {\n        \"time\": 45,\n        \"mino\": 15,\n        \"can\": 1\n      }\n
+        \   },\n    \"allow_tip\": 1,\n    \"allow_asap\": 1,\n    \"cu\": [\n      \"American\",\n
+        \     \"Catering\",\n      \"Healthy\",\n      \"Ice Cream\",\n      \"Mexican\",\n
+        \     \"Seafood\",\n      \"Latin\",\n      \"Steak\",\n      \"Corporate
+        Gifts\",\n      \"Holiday Gifts\",\n      \"Salad\",\n      \"Desserts And
+        Bakeries\"\n    ],\n    \"addr\": \"709 Texas Ave S, College Station, TX\",\n
+        \   \"full_addr\": {\n      \"addr\": \"709 Texas Ave S\",\n      \"addr2\":
+        \"\",\n      \"city\": \"College Station\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"77840-1917\"\n    },\n    \"city\": \"College Station\",\n    \"del\": 45,\n
+        \   \"mino\": 15,\n    \"is_delivering\": 1\n  },\n  {\n    \"id\": 31884,\n
+        \   \"na\": \"BreakfastToWork\",\n    \"cs_phone\": \"646-801-6659\",\n    \"rds_info\":
+        {\n      \"id\": 182,\n      \"name\": \"Ordr.in\",\n      \"logo\": \"\"\n
+        \   },\n    \"services\": {\n      \"deliver\": {\n        \"time\": 45,\n
+        \       \"mino\": 5.5,\n        \"can\": 0\n      }\n    },\n    \"allow_tip\":
+        1,\n    \"allow_asap\": 1,\n    \"addr\": \"10821 N Central Expy, Dallas,
+        TX\",\n    \"full_addr\": {\n      \"addr\": \"10821 N Central Expy\",\n      \"addr2\":
+        \"\",\n      \"city\": \"Dallas\",\n      \"state\": \"TX\",\n      \"postal_code\":
+        \"75231-1003\"\n    },\n    \"city\": \"Dallas\",\n    \"latitude\": 32.895874,\n
+        \   \"longitude\": -96.769534,\n    \"del\": 45,\n    \"mino\": 5.5,\n    \"is_delivering\":
+        0\n  }\n]"
+    http_version: 
+  recorded_at: Sun, 10 Nov 2013 22:50:10 GMT
+recorded_with: VCR 2.7.0
