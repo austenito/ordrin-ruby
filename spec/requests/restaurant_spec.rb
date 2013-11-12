@@ -14,6 +14,22 @@ describe OrdrIn::Restaurant do
     end
   end
 
+  context ".details", :vcr do
+    it "returns restaurant details" do
+      details = OrdrIn::Restaurant.details(147)
+      details.restaurant_id.should == "147"
+      details.city.should == "College Station"
+    end
+  end
+
+  context "#details", :vcr do
+    it "returns restaurant details" do
+      details = OrdrIn::Restaurant.new(id: 147).details
+      details.restaurant_id.should == "147"
+      details.city.should == "College Station"
+    end
+  end
+
   context "#delivery_check" do
     it "returns delivery check", :vcr do
       restaurant = OrdrIn::Restaurant.new(id: 147)
