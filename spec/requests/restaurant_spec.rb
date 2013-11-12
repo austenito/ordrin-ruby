@@ -23,4 +23,16 @@ describe OrdrIn::Restaurant do
       delivery_check.meals = [0, 4]
     end
   end
+
+  context "#fee" do
+    it "returns fee", :vcr, record: :all do
+      restaurant = OrdrIn::Restaurant.new(id: 147)
+
+      fee = restaurant.fee(subtotal: 20.42, tip: 5.05, date_time: "ASAP", 
+                           address: "1 Main Street", zip_code: 77840, 
+                           city: "College Station")
+      fee.rid = 147
+      fee.tax = 2.01
+    end
+  end
 end

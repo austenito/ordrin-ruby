@@ -6,6 +6,10 @@ module OrdrIn
       self.check ||= OrdrIn::Delivery.check(id, params)
     end
 
+    def fee(params)
+      self.check ||= OrdrIn::Delivery.fee(id, params)
+    end
+
     def self.deliveries(params)
       url = URI.escape("dl/#{params[:date_time]}/#{params[:zip_code]}/#{params[:city]}/#{params[:address]}")
       response = OrdrIn::RestaurantRequest.get(url)
