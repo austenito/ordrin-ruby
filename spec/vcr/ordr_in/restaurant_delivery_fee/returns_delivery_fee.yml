@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://r-test.ordr.in/fee/147/20.42/5.05/ASAP/77840/College%20Station/1%20Main%20Street
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Tue, 12 Nov 2013 03:16:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '319'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "rid": "147",
+          "allow_tip": 1,
+          "allow_asap": 1,
+          "tax": "2.01",
+          "fee": "3.99",
+          "discount": "0.00",
+          "meals": [
+            0,
+            4
+          ],
+          "zone_id": 644398,
+          "provided_id": "80",
+          "provided_id2": "54",
+          "can_service": 1,
+          "service": "delivery",
+          "delivery": 1,
+          "mino": "15.00",
+          "ready": 45,
+          "del": 45
+        }
+    http_version: 
+  recorded_at: Tue, 12 Nov 2013 03:16:24 GMT
+recorded_with: VCR 2.7.0
