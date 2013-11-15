@@ -2,19 +2,24 @@ module OrdrIn
   class User < Model
     attr_accessor :email, :password, :details
 
-    def initialize(email, password)
-      @email = email
-      @password = password
-    end
-
     def details
       return @details if @details
-      url = "/u/#{CGI.escape(email)}"
-      @details = Hashie::Mash.new(UserRequest.get(url, email: email, password: password).body)
+      url = "/u/#{encode_email}"
+      @details = Hashie::Mash.new(UserRequest.get(url, user_params).body)
     end
 
-    def self.create_account(params)
-      UserRequest.post("/u/#{params[:email]}", params)
+    def create_account(params)
+      Hashie::Mash.new(UserRequest.post("/u/#{encode_email}", user_params.merge(params)).body)
+    end
+
+    private
+
+    def user_params
+      { email: model.email, password: model.password }
+    end
+
+    def encode_email
+      CGI.escape(model.email)
     end
   end
 end
