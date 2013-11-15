@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://u-test.ordr.in/u/austen.dev%252Bordrin%2540gmail.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username=austen.dev+ordrin@gmail.com, response=37b0d65ddf6d14c94e5a111ec69bda98612f856fe8576f43470afd28c831496b,
+        version=1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Fri, 15 Nov 2013 03:03:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '170'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_err": 1,
+          "msg": "Invalid Data",
+          "errs": {
+            "last_name": "last_name is required",
+            "first_name": "first_name is required",
+            "pw": "pw is required"
+          }
+        }
+    http_version: 
+  recorded_at: Fri, 15 Nov 2013 03:03:27 GMT
+- request:
+    method: post
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username=austen.dev+ordrin@gmail.com, response=b98926e334ebf70de7cec44fcb2716ac3aa98c6c3a10dda601dec26bf3012ca0,
+        version=1
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Fri, 15 Nov 2013 03:06:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '59'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_err": 1,
+          "err_code": 401,
+          "msg": "Unauthorized"
+        }
+    http_version: 
+  recorded_at: Fri, 15 Nov 2013 03:06:30 GMT
+- request:
+    method: get
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com
+    body:
+      encoding: UTF-8
+      string: '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="b98926e334ebf70de7cec44fcb2716ac3aa98c6c3a10dda601dec26bf3012ca0",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Fri, 15 Nov 2013 03:29:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '202'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_id": "528582f84c7da2426f000011",
+          "em": "austen.dev+ordrin@gmail.com",
+          "first_name": "Austen",
+          "last_name": "Ito",
+          "pw": "cf80cd8aed482d5d1527d7dc72fceff84e6326592848447d2dc0b0e87dfc9a90"
+        }
+    http_version: 
+  recorded_at: Fri, 15 Nov 2013 03:29:25 GMT
+recorded_with: VCR 2.7.0

@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com
+    body:
+      encoding: UTF-8
+      string: '{"first_name":"Nyan","last_name":"Cat"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username=austen.dev+ordrin@gmail.com, response=26de07c0c8d909ccc7af6d9d80b358c36b806c2a6862af571ab967edb74ac319,
+        version=1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Fri, 15 Nov 2013 02:39:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '59'
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "_err": 1,
+          "err_code": 401,
+          "msg": "Unauthorized"
+        }
+    http_version: 
+  recorded_at: Fri, 15 Nov 2013 02:39:39 GMT
+recorded_with: VCR 2.7.0

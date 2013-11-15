@@ -16,16 +16,35 @@ module OrdrIn
       ""
     end
 
-    def send_request(method, path)
+    def send_request(method, path, params = {})
       response = connection.send(method, path) do |request|
         request["X-NAAMA-CLIENT-AUTHENTICATION"] = "id=#{OrdrIn::Config.api_key}, version=1"
+
+        email = params.delete(:email)
+        password = params.delete(:password)
+        if email && password
+          hash_code = generate_hash_code(email, password, path)
+          request["X-NAAMA-AUTHENTICATION"] = "username=\"#{email}\", response=\"#{hash_code}\", version=\"1\""
+        end
+        request.body = params.to_json
+
       end
       OrdrIn::Response.new(self, response)
     end
 
-    def self.get(path)
-      request = self.new
-      request.send_request(:get, path)
+    def self.get(path, params = {})
+      self.new.send_request(:get, path, params)
+    end
+
+    def self.post(path, params = {})
+      self.new.send_request(:post, path, params)
+    end
+
+    private
+
+    def generate_hash_code(email, password, path)
+      hashed_password = Digest::SHA256.new.hexdigest(password)
+      Digest::SHA256.new.hexdigest("#{hashed_password}#{email}#{path}")
     end
   end
 end
