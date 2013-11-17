@@ -47,7 +47,7 @@ module OrdrIn
 
     def remove_address(nickname)
       response = UserRequest.delete("/u/#{encode_email}/addrs/#{nickname}", user_params)
-      OrdrIn::Address.new(response.body).msg == "Address removed: test" ? true : false
+      OrdrIn::Address.new(response.body).msg == "Address removed: #{nickname}" ? true : false
     end
 
     private

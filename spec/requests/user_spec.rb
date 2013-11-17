@@ -36,6 +36,10 @@ describe OrdrIn::User do
     it "creates address" do
       user.create_address(params).should be_true
     end
+
+    it "doesn't create address" do
+      expect { user.create_address({}) }.to raise_error(OrdrIn::NotFoundError)
+    end
   end
 
   context "#all_addresses", :vcr do
@@ -58,8 +62,8 @@ describe OrdrIn::User do
     end
 
     context "address doesn't exist" do
-      it "returns false" do
-        user.remove_address("nyan").should be_false
+      it "returns true" do
+        user.remove_address("nyan").should be_true
       end
     end
   end
