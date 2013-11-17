@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs/Work
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="e07e58047869434366727b32bd0473907d060d2cc88bb2b75c1a089f84de1595",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 20:03:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '157'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"nick\": \"Work\",\n  \"addr\": \"456 Carroll Street\",\n  \"addr2\":
+        \"Room 1\",\n  \"city\": \"Brooklyn\",\n  \"state\": \"NY\",\n  \"zip\": \"11215\",\n
+        \ \"phone\": \"808-123-4567\"\n}"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 20:03:26 GMT
+recorded_with: VCR 2.7.0

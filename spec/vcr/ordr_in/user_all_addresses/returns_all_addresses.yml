@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 19:59:24 GMT
+      Content-Type:
+      - text/plain
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '9'
+    body:
+      encoding: US-ASCII
+      string: Not Found
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 19:59:24 GMT
+- request:
+    method: get
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="8d3bbf2d8ba86117eaf2f72259cefbc1da788e41a999eb99ccfe18a0edd486a2",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 19:59:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '584'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"Work\": {\n    \"nick\": \"Work\",\n    \"addr\": \"456 Carroll
+        Street\",\n    \"addr2\": \"Room 1\",\n    \"city\": \"Brooklyn\",\n    \"state\":
+        \"NY\",\n    \"zip\": \"11215\",\n    \"phone\": \"808-123-4567\",\n    \"default\":
+        1\n  },\n  \"nickname\": {\n    \"nick\": \"nickname\"\n  },\n  \"test\":
+        {\n    \"nick\": \"test\",\n    \"addr\": \"123\",\n    \"addr2\": \"\",\n
+        \   \"city\": \"College Station\",\n    \"state\": \"TX\",\n    \"zip\": \"77840\",\n
+        \   \"phone\": \"234-567-8901\"\n  },\n  \"work\": {\n    \"nick\": \"work\",\n
+        \   \"addr\": \"123\",\n    \"addr2\": \"\",\n    \"city\": \"Brooklyn\",\n
+        \   \"state\": \"NY\",\n    \"zip\": \"20001\",\n    \"phone\": \"808-230-6540\"\n
+        \ }\n}"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 19:59:52 GMT
+recorded_with: VCR 2.7.0

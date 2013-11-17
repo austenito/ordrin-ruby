@@ -31,6 +31,20 @@ module OrdrIn
       OrdrIn::Address.new(response.body).msg == "Address set" ? true : false
     end
 
+    def all_addresses
+      return @addresses if @addresses
+      response = UserRequest.get("/u/#{encode_email}/addrs", user_params)
+      @addresses = response.body.values.collect do |address_attributes|
+        OrdrIn::Address.new(address_attributes)
+      end
+    end
+
+    def address(nickname)
+      return @address if @address
+      response = UserRequest.get("/u/#{encode_email}/addrs/#{nickname}", user_params)
+      @address = OrdrIn::Address.new(response.body)
+    end
+
     private
 
     def user_params(params = {})

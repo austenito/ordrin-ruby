@@ -38,4 +38,20 @@ describe OrdrIn::User do
       user.create_address(params).should be_true
     end
   end
+
+  context "#all_addresses", :vcr do
+    it "returns all addresses" do
+      user = OrdrIn::User.new(email: email, password: password)
+      user.all_addresses.count.should > 0
+    end
+  end
+
+  context "#address", :vcr do
+    it "returns specific address" do
+      user = OrdrIn::User.new(email: email, password: password)
+      address = user.address("Work")
+      address.nick.should == "Work"
+      address.zip.should == "11215"
+    end
+  end
 end
