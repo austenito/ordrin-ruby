@@ -3,6 +3,7 @@ require 'spec_helper'
 describe OrdrIn::User do
   let(:email) { "austen.dev+ordrin@gmail.com" }
   let(:password) { "testing" }
+  let(:user) { OrdrIn::User.new(email: email, password: password) }
 
   context ".create_account", :vcr do
     it "creates account" do
@@ -12,10 +13,9 @@ describe OrdrIn::User do
       response.user_id.should_not be_nil
     end
   end
-  
+
   context "#details", :vcr do
     it "returns details" do
-      user = OrdrIn::User.new(email: email, password: password)
       details = user.details
       details.em = "austen.dev+ordrin@gmail.com"
       details.first_name = "Austen"
@@ -34,24 +34,33 @@ describe OrdrIn::User do
     end
 
     it "creates address" do
-      user = OrdrIn::User.new(email: email, password: password)
       user.create_address(params).should be_true
     end
   end
 
   context "#all_addresses", :vcr do
     it "returns all addresses" do
-      user = OrdrIn::User.new(email: email, password: password)
       user.all_addresses.count.should > 0
     end
   end
 
   context "#address", :vcr do
     it "returns specific address" do
-      user = OrdrIn::User.new(email: email, password: password)
       address = user.address("Work")
       address.nick.should == "Work"
       address.zip.should == "11215"
+    end
+  end
+
+  context "#remove_address", :vcr do
+    it "returns true" do
+      user.remove_address("test").should be_true
+    end
+
+    context "address doesn't exist" do
+      it "returns false" do
+        user.remove_address("nyan").should be_false
+      end
     end
   end
 end

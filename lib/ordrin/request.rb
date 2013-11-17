@@ -44,6 +44,10 @@ module OrdrIn
       new.send_request(:put, path, params)
     end
 
+    def self.delete(path, params = {})
+      new.send_request(:delete, path, params)
+    end
+
     private
 
     def generate_hash_code(email, password, path)

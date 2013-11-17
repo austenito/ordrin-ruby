@@ -61,5 +61,13 @@ describe OrdrIn::Request do
         return_value.should == response
       end
     end
+
+    context ".delete" do
+      it "receives response" do
+        return_value = OrdrIn::Request.put("path", nyan: :cat)
+        connection.should have_received(:send).with(:delete, "path")
+        return_value.should == response
+      end
+    end
   end
 end

@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs/nyan
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="51a8574a46e2d80838d1d70eae77f22e2b4b59e44f0c451149fe8ed3118754a2",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 20:48:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '36'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"msg\": \"Address removed: nyan\"\n}"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 20:48:09 GMT
+recorded_with: VCR 2.7.0
