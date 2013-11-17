@@ -7,7 +7,7 @@ module OrdrIn
 
       @connection = Faraday.new(url: url) do |faraday|
         faraday.request  :url_encoded
-        #faraday.response :logger
+        faraday.response :logger
         faraday.adapter  Faraday.default_adapter
       end
     end
@@ -33,11 +33,15 @@ module OrdrIn
     end
 
     def self.get(path, params = {})
-      self.new.send_request(:get, path, params)
+      new.send_request(:get, path, params)
     end
 
     def self.post(path, params = {})
-      self.new.send_request(:post, path, params)
+      new.send_request(:post, path, params)
+    end
+
+    def self.put(path, params = {})
+      new.send_request(:put, path, params)
     end
 
     private

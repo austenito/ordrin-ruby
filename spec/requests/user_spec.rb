@@ -21,4 +21,21 @@ describe OrdrIn::User do
       details.first_name = "Austen"
     end
   end
+
+  context "#create_address", :vcr do
+    let(:params) do
+      { nick: "nickname",
+        addr: "456 Carroll Street",
+        city: "Brooklyn",
+        state: "NY",
+        zip: 11215,
+        phone: "808-123-4567"
+      }
+    end
+
+    it "creates address" do
+      user = OrdrIn::User.new(email: email, password: password)
+      user.create_address(params).should be_true
+    end
+  end
 end

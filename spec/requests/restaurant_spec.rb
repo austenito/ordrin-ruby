@@ -33,7 +33,7 @@ describe OrdrIn::Restaurant do
   end
 
   context "#delivery_fee" do
-    it "returns delivery_fee", :vcr, record: :all do
+    it "returns delivery_fee", :vcr do
       restaurant = OrdrIn::Restaurant.new(id: 147)
 
       delivery_fee = restaurant.delivery_fee(subtotal: 20.42, tip: 5.05, date_time: "ASAP",

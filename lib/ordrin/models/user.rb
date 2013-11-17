@@ -1,12 +1,12 @@
 module OrdrIn
   class User < Model
-    attr_accessor :email, :password, :details
+    attr_accessor :details
 
     # @return [OrdrIn::UserDetails]
     def details
       return @details if @details
       url = "/u/#{encode_email}"
-      @details = Hashie::Mash.new(UserRequest.get(url, user_params).body)
+      @details = OrdrIn::UserDetails.new(UserRequest.get(url, user_params).body)
     end
 
     # @param params [Hash] testing
@@ -14,7 +14,7 @@ module OrdrIn
     # @option params [String] :last_name
     # @return [OrdrIn::Account]
     def create_account(params)
-      Hashie::Mash.new(UserRequest.post("/u/#{encode_email}", user_params.merge(params)).body)
+      OrdrIn::Account.new(UserRequest.post("/u/#{encode_email}", user_params(params)).body)
     end
 
     # @param params [Hash] testing
@@ -25,15 +25,16 @@ module OrdrIn
     # @option params [String]  :state 2 letter state. Ex. NY
     # @option params [Integer] :zip
     # @option params [String]  :phone
-    # @return [OrdrIn::Address]
+    # @return [Boolean]
     def create_address(params)
-
+      response = UserRequest.put("/u/#{encode_email}/addrs/#{params[:nick]}", user_params(params))
+      OrdrIn::Address.new(response.body).msg == "Address set" ? true : false
     end
 
     private
 
-    def user_params
-      { email: model.email, password: model.password }
+    def user_params(params = {})
+      { email: email, password: password }.merge(params)
     end
 
     def encode_email

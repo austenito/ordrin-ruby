@@ -47,9 +47,17 @@ describe OrdrIn::Request do
     end
 
     context ".post" do
-      it  "receives response" do
+      it "receives response" do
         return_value = OrdrIn::Request.post("path", nyan: :cat)
         connection.should have_received(:send).with(:post, "path")
+        return_value.should == response
+      end
+    end
+
+    context ".put" do
+      it "receives response" do
+        return_value = OrdrIn::Request.put("path", nyan: :cat)
+        connection.should have_received(:send).with(:put, "path")
         return_value.should == response
       end
     end

@@ -1,0 +1,123 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/nickname
+    body:
+      encoding: UTF-8
+      string: ! '{"nick":"nickname","addr":"456 Carroll Street","city":"Brooklyn","state":"NY","zip":11215,"phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="0fa9217a71e71d8e35b3598801e29547854561d9cffde3667b56cbcff46238a8",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 19:36:50 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+    body:
+      encoding: US-ASCII
+      string: Cannot POST /u/austen.dev%2Bordrin%40gmail.com/nickname
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 19:36:50 GMT
+- request:
+    method: post
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs/nickname
+    body:
+      encoding: UTF-8
+      string: ! '{"nick":"nickname","addr":"456 Carroll Street","city":"Brooklyn","state":"NY","zip":11215,"phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="2b44de401fe3ed03e76046be5667ef868d6b94a647055e2340eec5a8bb50f933",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 19:50:36 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+    body:
+      encoding: US-ASCII
+      string: Cannot POST /u/austen.dev%2Bordrin%40gmail.com/addrs/nickname
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 19:50:36 GMT
+- request:
+    method: put
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/addrs/nickname
+    body:
+      encoding: UTF-8
+      string: ! '{"nick":"nickname","addr":"456 Carroll Street","city":"Brooklyn","state":"NY","zip":11215,"phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="2b44de401fe3ed03e76046be5667ef868d6b94a647055e2340eec5a8bb50f933",
+        version="1"
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 17 Nov 2013 19:51:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '26'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"msg\": \"Address set\"\n}"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2013 19:51:00 GMT
+recorded_with: VCR 2.7.0
