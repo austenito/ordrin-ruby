@@ -6,11 +6,13 @@ describe OrdrIn::User do
   let(:user) { OrdrIn::User.new(email: email, password: password) }
 
   context ".create_account", :vcr do
-    it "creates account" do
-      user = OrdrIn::User.new(email: "austen.dev+ordrin2@gmail.com", password: password)
-      response = user.create_account(first_name: "Nyan", last_name: "Cat")
-      response.msg.should == "user saved"
-      response.user_id.should_not be_nil
+    it "returns user" do
+      user = OrdrIn::User.create_account(email: "austen.dev+ordrin2@gmail.com", password: password,
+                              first_name: "Nyan", last_name: "Cat")
+      user.msg.should == "user saved"
+      user.user_id.should_not be_nil
+      user.first_name.should == "Nyan"
+      user.last_name.should == "Cat"
     end
   end
 

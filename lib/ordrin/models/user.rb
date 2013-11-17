@@ -10,11 +10,14 @@ module OrdrIn
     end
 
     # @param params [Hash] testing
+    # @option params [String] :email
+    # @option params [String] :password
     # @option params [String] :first_name
     # @option params [String] :last_name
-    # @return [OrdrIn::Account]
-    def create_account(params)
-      OrdrIn::Account.new(UserRequest.post("/u/#{encode_email}", user_params(params)).body)
+    # @return [OrdrIn::User]
+    def self.create_account(params)
+      response = UserRequest.post("/u/#{encode_email(params[:email])}", params)
+      OrdrIn::User.new(response.body.merge(params))
     end
 
     # @param params [Hash] testing
@@ -57,7 +60,11 @@ module OrdrIn
     end
 
     def encode_email
-      CGI.escape(model.email)
+      OrdrIn::User.encode_email(email)
+    end
+
+    def self.encode_email(email)
+      CGI.escape(email)
     end
   end
 end
