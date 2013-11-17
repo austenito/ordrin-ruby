@@ -28,14 +28,14 @@ module OrdrIn
 end
 
 require_relative "version"
-require_relative 'ordrin/model'
 require_relative "ordrin/request"
 require_relative "ordrin/response"
-require_relative "ordrin/restaurant_request"
-require_relative "ordrin/restaurant"
-require_relative "ordrin/restaurant_details"
-require_relative "ordrin/delivery_check"
-require_relative "ordrin/delivery_fee"
 require_relative "ordrin/errors"
-require_relative "ordrin/user"
+require_relative 'ordrin/models/model'
+require_relative "ordrin/models/restaurant"
+require_relative "ordrin/models/restaurant_details"
+require_relative "ordrin/models/delivery_check"
+require_relative "ordrin/models/delivery_fee"
+require_relative "ordrin/models/user"
+require_relative "ordrin/restaurant_request"
 require_relative "ordrin/user_request"
