@@ -11,4 +11,11 @@ module OrdrIn
       super
     end
   end
+
+  class DeliveryCheck < Model; end;
+  class DeliveryFee < Model; end;
+  class RestaurantDetails < Model; end;
+  class UserDetails < Model; end;
+  class Address < Model; end;
+  class Account < Model; end;
 end

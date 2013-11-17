@@ -3,7 +3,7 @@
 require File.expand_path('../lib/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = 'ruby-resty'
+  gem.name          = 'ordrin-ruby'
   gem.version       = OrdrIn::VERSION
   gem.authors       = ['Austen Ito']
   gem.email         = ['austen.dev@gmail.com']
@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ['lib']
   gem.license = 'MIT'
 
-  #gem.add_dependency 'activesupport', ">= 3.2.13"
+  gem.add_dependency 'activesupport', ">= 3.2.13"
   gem.add_dependency 'hashie'
   gem.add_dependency 'multi_json'
   #gem.add_dependency 'pry'

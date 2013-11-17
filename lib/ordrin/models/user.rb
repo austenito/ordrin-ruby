@@ -2,7 +2,7 @@ module OrdrIn
   class User < Model
     attr_accessor :email, :password, :details
 
-    @return [OrdrIn::UserDetails]
+    # @return [OrdrIn::UserDetails]
     def details
       return @details if @details
       url = "/u/#{encode_email}"
