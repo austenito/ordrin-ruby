@@ -14,6 +14,13 @@ describe OrdrIn::User do
       user.first_name.should == "Nyan"
       user.last_name.should == "Cat"
     end
+
+    context "missing params" do
+      it "has no errors" do
+        user = OrdrIn::User.create_account(email: "austen.dev+ordrin2@gmail.com", password: password)
+        user.errors?.should be_false
+      end
+    end
   end
 
   context "#details", :vcr do
@@ -36,11 +43,19 @@ describe OrdrIn::User do
     end
 
     it "creates address" do
-      user.create_address(params).should be_true
+      address = user.create_address(params)
+      address.city.should == "Brooklyn"
     end
 
     it "doesn't create address" do
       expect { user.create_address({}) }.to raise_error(OrdrIn::NotFoundError)
+    end
+
+    context "with missing params", :vcr do
+      it "doesn't return error" do
+        address = user.create_address(nick: "nyan")
+        address.errors?.should be_false
+      end
     end
   end
 
@@ -69,4 +84,35 @@ describe OrdrIn::User do
       end
     end
   end
+
+  #context "#create_credit_card", :vcr, record: :all do
+    #let(:credit_card_params) do
+      #{
+        #nick: "nickname",
+        #name: "Nyan Cat Black Card",
+        #number: "4242424242424242",
+        #cvc: 123,
+        #expiry_month: "02",
+        #expiry_year: "2042",
+        #type: "Visa",
+        #bill_addr: "456 Carroll St.",
+        #bill_city: "Brooklyn",
+        #bill_state: "NY",
+        #bill_zip: "11215",
+        #bill_phone: "808-123-4567"
+      #}
+    #end
+
+    #it "returns credit card" do
+      #credit_card = user.create_credit_card(credit_card_params)
+      #credit_card.type.should == "Visa"
+    #end
+
+    #context "failed to create credit card" do
+      #it "returns errors" do
+        #credit_card = user.create_credit_card(credit_card_params)
+        #credit_card.errors?.should be_true
+      #end
+    #end
+  #end
 end

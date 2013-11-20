@@ -27,7 +27,6 @@ module OrdrIn
           request["X-NAAMA-AUTHENTICATION"] = "username=\"#{email}\", response=\"#{hash_code}\", version=\"1\""
         end
         request.body = params.to_json
-
       end
       OrdrIn::Response.new(self, response)
     end

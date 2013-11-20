@@ -4,6 +4,7 @@ require 'mocha/api'
 require 'bourne'
 require 'vcr'
 require 'active_support/inflector'
+require 'pry-debugger'
 
 RSpec.configure do |c|
   c.mock_with :mocha
