@@ -68,8 +68,8 @@ module OrdrIn
     # @option params [Integer] :bill_zip
     # @option params [String]  :bill_phone
     def create_credit_card(params)
-      response = UserRequest.put("/u/#{encode_email}/ccs/#{params[:nick]}", user_params)
-      OrdrIn::CreditCard.new(response.body)
+      response = UserRequest.put("/u/#{encode_email}/ccs/#{params[:nick]}", user_params.merge(params))
+      OrdrIn::CreditCard.new(response.body.merge(params), response.errors)
     end
 
     private

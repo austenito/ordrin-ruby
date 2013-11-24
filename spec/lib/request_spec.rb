@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe OrdrIn::Request do
   context "#send_request" do
-    let(:request) { Hashie::Mash.new }
+    let(:request) { Hashie::Mash.new(headers: {}) }
 
     before(:each) do
       OrdrIn::Response.stubs(:new).returns({})
@@ -64,7 +64,7 @@ describe OrdrIn::Request do
 
     context ".delete" do
       it "receives response" do
-        return_value = OrdrIn::Request.put("path", nyan: :cat)
+        return_value = OrdrIn::Request.delete("path", nyan: :cat)
         connection.should have_received(:send).with(:delete, "path")
         return_value.should == response
       end

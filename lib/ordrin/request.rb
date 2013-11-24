@@ -26,6 +26,7 @@ module OrdrIn
           hash_code = generate_hash_code(email, password, path)
           request["X-NAAMA-AUTHENTICATION"] = "username=\"#{email}\", response=\"#{hash_code}\", version=\"1\""
         end
+        request.headers['Content-Type'] = 'application/json'
         request.body = params.to_json
       end
       OrdrIn::Response.new(self, response)

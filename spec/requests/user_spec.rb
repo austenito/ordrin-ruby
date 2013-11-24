@@ -85,34 +85,37 @@ describe OrdrIn::User do
     end
   end
 
-  #context "#create_credit_card", :vcr, record: :all do
-    #let(:credit_card_params) do
-      #{
-        #nick: "nickname",
-        #name: "Nyan Cat Black Card",
-        #number: "4242424242424242",
-        #cvc: 123,
-        #expiry_month: "02",
-        #expiry_year: "2042",
-        #type: "Visa",
-        #bill_addr: "456 Carroll St.",
-        #bill_city: "Brooklyn",
-        #bill_state: "NY",
-        #bill_zip: "11215",
-        #bill_phone: "808-123-4567"
-      #}
-    #end
+  context "#create_credit_card", :vcr, record: :all do
+    let(:credit_card_params) do
+      {
+        nick: "nickname",
+        name: "Nyan Cat Black Card",
+        number: "4242424242424242",
+        cvc: 123,
+        expiry_month: "02",
+        expiry_year: "2042",
+        type: "Visa",
+        bill_addr: "456 Carroll St.",
+        bill_city: "Brooklyn",
+        bill_state: "NY",
+        bill_zip: "11215",
+        bill_phone: "808-123-4567"
+      }
+    end
 
-    #it "returns credit card" do
-      #credit_card = user.create_credit_card(credit_card_params)
-      #credit_card.type.should == "Visa"
-    #end
+    it "returns credit card" do
+      credit_card = user.create_credit_card(credit_card_params)
+      credit_card.type.should == "Visa"
+      credit_card.errors.should be_false
+    end
 
-    #context "failed to create credit card" do
-      #it "returns errors" do
-        #credit_card = user.create_credit_card(credit_card_params)
-        #credit_card.errors?.should be_true
-      #end
-    #end
-  #end
+    context "failed to create credit card" do
+      it "returns errors" do
+        credit_card_params.delete(:expiry_year)
+        credit_card = user.create_credit_card(credit_card_params)
+        credit_card.errors?.should be_true
+        puts credit_card.errors
+      end
+    end
+  end
 end

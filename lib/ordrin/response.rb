@@ -21,7 +21,7 @@ module OrdrIn
     end
 
     def add_errors
-      if body["_err"]
+      if body["_err"] == 1
         self.errors = Hashie::Mash.new(msg: body["_msg"]["_msg"])
       end
       rescue

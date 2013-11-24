@@ -13,7 +13,7 @@ module OrdrIn
     end
 
     def errors?
-
+      errors ? true : false
     end
   end
 

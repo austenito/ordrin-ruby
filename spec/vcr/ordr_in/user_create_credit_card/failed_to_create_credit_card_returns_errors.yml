@@ -5,7 +5,8 @@ http_interactions:
     uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/ccs/nickname
     body:
       encoding: UTF-8
-      string: ! '{}'
+      string: ! '{"nick":"nickname","name":"Nyan Cat Black Card","number":"4242424242424242","cvc":123,"expiry_month":"02","type":"Visa","bill_addr":"456
+        Carroll St.","bill_city":"Brooklyn","bill_state":"NY","bill_zip":"11215","bill_phone":"808-123-4567"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -15,7 +16,7 @@ http_interactions:
       - username="austen.dev+ordrin@gmail.com", response="7944faf40333649aa131e1f89392201cdb0d225903569ad106c64422c7477273",
         version="1"
       Content-Type:
-      - application/x-www-form-urlencoded
+      - application/json
       Accept:
       - ! '*/*'
   response:
@@ -26,7 +27,7 @@ http_interactions:
       Server:
       - nginx/1.0.15
       Date:
-      - Wed, 20 Nov 2013 01:43:27 GMT
+      - Sun, 24 Nov 2013 00:11:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -34,13 +35,12 @@ http_interactions:
       X-Powered-By:
       - Express
       Content-Length:
-      - '203'
+      - '128'
     body:
       encoding: UTF-8
       string: ! "{\n  \"_err\": 1,\n  \"err_code\": 400,\n  \"_msg\": {\n    \"_err\":
-        1,\n    \"_msg\": \"Expiration date is required.\\nCredit card must include
-        either number or venmo_sdk_payment_method_code.\",\n    \"_status\": 400\n
+        1,\n    \"_msg\": \"Expiration date is invalid.\",\n    \"_status\": 400\n
         \ }\n}"
     http_version: 
-  recorded_at: Wed, 20 Nov 2013 01:43:27 GMT
+  recorded_at: Sun, 24 Nov 2013 00:12:02 GMT
 recorded_with: VCR 2.7.0
