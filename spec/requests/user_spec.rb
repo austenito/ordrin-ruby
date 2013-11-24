@@ -85,7 +85,7 @@ describe OrdrIn::User do
     end
   end
 
-  context "#create_credit_card", :vcr, record: :all do
+  context "#create_credit_card", :vcr do
     let(:credit_card_params) do
       {
         nick: "nickname",
@@ -116,6 +116,37 @@ describe OrdrIn::User do
         credit_card.errors?.should be_true
         puts credit_card.errors
       end
+    end
+  end
+
+  context "#remove_credit_card", :vcr do
+    it "removes credit card" do
+       user.remove_credit_card("Work").should be_true
+    end
+
+    it "raises not found error" do
+       expect { user.remove_credit_card("123455") }.to raise_error(OrdrIn::NotFoundError)
+    end
+  end
+
+  context "#find_credit_card", :vcr do
+    it "returns credit card" do
+      credit_card = user.find_credit_card("nickname")
+      credit_card.nick == "nickname"
+      credit_card.type == "Visa"
+    end
+
+    it "raises not found error" do
+       expect { user.find_credit_card("123455") }.to raise_error(OrdrIn::NotFoundError)
+    end
+  end
+
+  context "#find_all_credit_cards", :vcr, record: :all do
+    it "returns credit cards" do
+      credit_cards = user.find_all_credit_cards
+      credit_cards.count.should == 2
+      credit_cards.first.nick.should == "Nyan"
+      credit_cards.last.nick.should == "nickname"
     end
   end
 end

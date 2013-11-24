@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/ccs/123455
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="4335933e5875464eea24d8bb5f358f1f13159cf42f7872e5bc1b503146d4dea1",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 24 Nov 2013 00:21:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '77'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"_err\": 1,\n  \"err_code\": 404,\n  \"msg\": \"No cc for that
+        nickname found.\"\n}"
+    http_version: 
+  recorded_at: Sun, 24 Nov 2013 00:21:32 GMT
+recorded_with: VCR 2.7.0

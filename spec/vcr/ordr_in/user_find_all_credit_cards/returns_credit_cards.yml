@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/ccs
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="e8b24eaa12ca54661e0bf569e238d5ffacde6f62c79d874beff5090ba1233412",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 24 Nov 2013 00:34:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '567'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"Nyan\": {\n    \"nick\": \"Nyan\",\n    \"cc_last5\": \"11111\",\n
+        \   \"type\": \"Visa\",\n    \"card_token\": \"8rghhr\",\n    \"expiry_year\":
+        \"2016\",\n    \"expiry_month\": \"02\",\n    \"bill_zip\": \"77840\",\n    \"bill_state\":
+        \"TX\",\n    \"bill_city\": \"College Station\",\n    \"bill_addr\": \"1 Main
+        Street\"\n  },\n  \"nickname\": {\n    \"nick\": \"nickname\",\n    \"cc_last5\":
+        \"24242\",\n    \"type\": \"Visa\",\n    \"card_token\": \"6kgtyw\",\n    \"expiry_year\":
+        \"2042\",\n    \"expiry_month\": \"02\",\n    \"bill_zip\": \"11215\",\n    \"bill_state\":
+        \"NY\",\n    \"bill_city\": \"Brooklyn\",\n    \"bill_addr\": \"456 Carroll
+        St.\"\n  }\n}"
+    http_version: 
+  recorded_at: Sun, 24 Nov 2013 00:34:36 GMT
+recorded_with: VCR 2.7.0

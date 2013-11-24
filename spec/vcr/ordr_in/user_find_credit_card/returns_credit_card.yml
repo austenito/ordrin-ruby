@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://u-test.ordr.in/u/austen.dev+ordrin@gmail.com/ccs/nickname
+    body:
+      encoding: UTF-8
+      string: ! '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="7944faf40333649aa131e1f89392201cdb0d225903569ad106c64422c7477273",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 24 Nov 2013 00:28:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '246'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"nick\": \"nickname\",\n  \"cc_last5\": \"24242\",\n  \"type\":
+        \"Visa\",\n  \"card_token\": \"6kgtyw\",\n  \"expiry_year\": \"2042\",\n  \"expiry_month\":
+        \"02\",\n  \"bill_zip\": \"11215\",\n  \"bill_state\": \"NY\",\n  \"bill_city\":
+        \"Brooklyn\",\n  \"bill_addr\": \"456 Carroll St.\"\n}"
+    http_version: 
+  recorded_at: Sun, 24 Nov 2013 00:29:05 GMT
+recorded_with: VCR 2.7.0

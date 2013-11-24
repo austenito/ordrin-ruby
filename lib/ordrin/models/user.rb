@@ -35,17 +35,15 @@ module OrdrIn
     end
 
     def all_addresses
-      return @addresses if @addresses
       response = UserRequest.get("/u/#{encode_email}/addrs", user_params)
-      @addresses = response.body.values.collect do |address_attributes|
+      response.body.values.collect do |address_attributes|
         OrdrIn::Address.new(address_attributes)
       end
     end
 
     def address(nickname)
-      return @address if @address
       response = UserRequest.get("/u/#{encode_email}/addrs/#{nickname}", user_params)
-      @address = OrdrIn::Address.new(response.body)
+      OrdrIn::Address.new(response.body)
     end
 
     def remove_address(nickname)
@@ -70,6 +68,23 @@ module OrdrIn
     def create_credit_card(params)
       response = UserRequest.put("/u/#{encode_email}/ccs/#{params[:nick]}", user_params.merge(params))
       OrdrIn::CreditCard.new(response.body.merge(params), response.errors)
+    end
+
+    def find_credit_card(nickname)
+      response = UserRequest.get("/u/#{encode_email}/ccs/#{nickname}", user_params)
+      OrdrIn::CreditCard.new(response.body, response.errors)
+    end
+
+    def find_all_credit_cards
+      response = UserRequest.get("/u/#{encode_email}/ccs", user_params)
+      response.body.values.collect do |credit_card_attributes|
+        OrdrIn::CreditCard.new(credit_card_attributes)
+      end
+    end
+
+    def remove_credit_card(nickname)
+      response = UserRequest.delete("/u/#{encode_email}/ccs/#{nickname}", user_params)
+      OrdrIn::CreditCard.new(response.body).msg == "Credit Card Removed" ? true : false
     end
 
     private
