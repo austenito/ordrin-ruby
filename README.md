@@ -22,6 +22,8 @@ calls to a `Hashie::Mash`, which wrap the response returned from the Ordr.in API
 
 This means all method names map to the documented responses found in the [Official Ordr.in API Documentation](https://hackfood.ordr.in/docs)
 
+Method parameters also map to the parameters found in the official documentation.
+
 ## Configuration
 
 You'll need to register for Ordr.in developer credentials. In an initializer you can call `init`. It takes two arguments:
@@ -76,7 +78,99 @@ delivery_fee.tax # => 2.01
 
 ## Users
 
+Let's create a user's account:
+
+```
+user = OrdrIn::User.create_account(email: "austen.dev+ordrin2@gmail.com", password: password,
+                                   first_name: "Nyan", last_name: "Cat")
+user.msg        # => "user saved"
+user.first_name # => "Nyan"
+```
+
+### Addresses
+
+Once we have a user, we can update that user's addresses:
+
+```
+address_info = { 
+                 nick: "Home",
+                 addr: "456 Carroll Street",
+                 city: "Brooklyn",
+                 state: "NY",
+                 zip: 11215,
+                 phone: "808-123-4567"
+               }
+
+address = user.create_address(address_info)
+address.city # => "Brooklyn"
+```
+
+And also retrieve addresses:
+
+```
+user.all_addresses # Returns an array of addresses
+```
+
+Or get a specific address by nickname:
+
+```
+address = user.address("Home")
+address.city # => "Brooklyn"
+```
+
+If we don't like an address, we can delete them too:
+
+```
+user.remove_address("Home")
+```
+
+### Credit Cards
+
+Credit cards follow the same interface as addresses. We can create one like this:
+
+```
+cc_params = {
+              nick: "Primary Card",
+              name: "Nyan Cat Black Card",
+              number: "4242424242424242",
+              cvc: 123,
+              expiry_month: "02",
+              expiry_year: "2042",
+              type: "Visa",
+              bill_addr: "456 Carroll St.",
+              bill_city: "Brooklyn",
+              bill_state: "NY",
+              bill_zip: "11215",
+              bill_phone: "808-123-4567"
+            }
+            
+credit_card = user.create_credit_card(cc_params)
+credit_card.name # => "Nyan Cat Black Card"
+```
+
+We can find all of our credit cards:
+
+```
+credit_cards = user.find_all_credit_cards # Returns an array of all your credit cards
+```
+
+We can also find credit cards by nickname:
+
+```
+credit_card = user.find_credit_card("Primary Card")
+credit_card.name # => "Nyan Cat Black Card"
+```
+
+If we want to get rid of a credit card, we can delete it by nickname:
+
+```
+user.remove_credit_card("Primary Card")
+```
+
+
 ## Orders
+
+## Error Handling
 
 # Contributing
 
