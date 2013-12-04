@@ -3,11 +3,11 @@
 require File.expand_path('../lib/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = 'ordrin-ruby'
+  gem.name          = 'ordrin_ruby'
   gem.version       = OrdrIn::VERSION
   gem.authors       = ['Austen Ito']
   gem.email         = ['austen.dev@gmail.com']
-  gem.homepage      = 'https://github.com/austenito/ordrin-ruby'
+  gem.homepage      = 'https://github.com/austenito/ordrin_ruby'
   gem.summary       = 'Consuming the Ordr.in API'
   gem.description   = gem.summary
   gem.files         = `git ls-files`.split("\n")
@@ -18,9 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'activesupport', ">= 3.2.13"
   gem.add_dependency 'hashie'
   gem.add_dependency 'multi_json'
-  #gem.add_dependency 'pry'
-  #gem.add_dependency 'rest-client', '1.6.7'
-  #gem.add_dependency 'trollop'
   gem.add_dependency 'faraday'
 
   gem.add_development_dependency 'bourne', "1.5.0"

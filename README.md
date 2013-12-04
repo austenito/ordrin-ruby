@@ -1,4 +1,4 @@
-# Ordrin-Ruby
+[![Build Status](https://travis-ci.org/austenito/ordrin_ruby.png)](https://travis-ci.org/austenito/ordrin_ruby)
 
 An unofficial [ordr.in](http://ordr.in/) ruby API wrapper around the Restaurants, Users, and Orders.
 
@@ -7,7 +7,7 @@ The official ruby library can be found [here](https://github.com/ordrin/api-ruby
 # Installation
 
 ```
-gem install ordrin-ruby
+gem install ordrin_ruby
 ```
 
 # Supported Ruby Versions
@@ -186,4 +186,6 @@ Don't forget to run the tests with `rake`
 
 Copyright (c) 2013 Austen Ito
 
-Ordrin-Ruby is released under the [MIT License][4]
+ordrin_ruby is released under the [MIT License][4]
+
+[4]: http://opensource.org/licenses/MIT
