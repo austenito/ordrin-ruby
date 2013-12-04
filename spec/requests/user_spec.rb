@@ -141,7 +141,7 @@ describe OrdrIn::User do
     end
   end
 
-  context "#find_all_credit_cards", :vcr, record: :all do
+  context "#find_all_credit_cards", :vcr do
     it "returns credit cards" do
       credit_cards = user.find_all_credit_cards
       credit_cards.count.should == 2
