@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/austenito/ordrin_ruby.png)](https://travis-ci.org/austenito/ordrin_ruby)
+[![Build Status](https://travis-ci.org/austenito/ordrin_ruby.png?branch=master)](https://travis-ci.org/austenito/ordrin_ruby)
 
 An unofficial [ordr.in](http://ordr.in/) ruby API wrapper around the Restaurants, Users, and Orders.
 
