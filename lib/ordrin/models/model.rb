@@ -22,6 +22,7 @@ module OrdrIn
   class RestaurantDetails < Model; end;
   class UserDetails < Model; end;
   class CreditCard < Model; end;
+  class Order < Model; end;
 
   class Address < Model
     # Overrides Enumerable#zip because the ordr.in API returns zip codes as

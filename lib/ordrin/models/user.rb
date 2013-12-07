@@ -6,7 +6,7 @@ module OrdrIn
       return @details if @details
       url = "/u/#{encode_email}"
       response = UserRequest.get(url, user_params)
-      @details = OrdrIn::UserDetails.new(response.body)
+      @details = OrdrIn::UserDetails.new(response.body, response.errors)
     end
 
     # @param params [Hash] testing
@@ -37,13 +37,13 @@ module OrdrIn
     def all_addresses
       response = UserRequest.get("/u/#{encode_email}/addrs", user_params)
       response.body.values.collect do |address_attributes|
-        OrdrIn::Address.new(address_attributes)
+        OrdrIn::Address.new(address_attributes, response.errors)
       end
     end
 
     def address(nickname)
       response = UserRequest.get("/u/#{encode_email}/addrs/#{nickname}", user_params)
-      OrdrIn::Address.new(response.body)
+      OrdrIn::Address.new(response.body, response.errors)
     end
 
     def remove_address(nickname)
@@ -78,7 +78,7 @@ module OrdrIn
     def find_all_credit_cards
       response = UserRequest.get("/u/#{encode_email}/ccs", user_params)
       response.body.values.collect do |credit_card_attributes|
-        OrdrIn::CreditCard.new(credit_card_attributes)
+        OrdrIn::CreditCard.new(credit_card_attributes, response.errors)
       end
     end
 
@@ -87,6 +87,80 @@ module OrdrIn
       OrdrIn::CreditCard.new(response.body).msg == "Credit Card Removed" ? true : false
     end
 
+    # @param params [Hash]
+    # @option params [String]  :rid Ordr.in's unique restaurant id
+    # @option params [String]  :tray The tray is composed of menu items and
+    #   optional sub-items. A single menu item's format is: [menu item
+    #   id]/[qty],[option id],[option id]... Multiple menu items are joined by a
+    #   +: [menu item id]/[qty]+[menu item id2]/[qty2] For example:
+    #   3270/2+3263/1,3279 Means 2 of menu item 3270 (with no sub options) and 1
+    #   of item num 3263 with sub option 3279.
+    # @option params [String]  :tip tip amount in dollars and cents
+    # @option params [String]  :delivery_date Either ASAP or in the date format
+    #   2 digit month - 2 digit date, i.e. January 21 would be 01-21
+    # @option params [String]  :delivery_time (Required if delivery_date is not
+    #   ASAP) Format is 2 digit hour (24 hour time) and 2 digit minutes, i.e.
+    #   9:30 PM would be 21:30.
+    # @option params [String]  :first_name
+    # @option params [String]  :last_name
+    # @option params [String]  :addr
+    # @option params [String]  :city
+    # @option params [String]  :state
+    # @option params [String]  :zip
+    # @option params [String]  :phone
+    # @option params [String]  :card_name
+    # @option params [String]  :card_number
+    # @option params [String]  :card_cvc
+    # @option params [String]  :card_expiry
+    # @option params [String]  :card_bill_addr
+    # @option params [String]  :card_bill_addr2
+    # @option params [String]  :card_bill_city
+    # @option params [String]  :card_bill_state
+    # @option params [String]  :card_bill_zip
+    # @option params [String]  :card_bill_phone
+    def place_order(params)
+      response = OrderRequest.post("/o/#{params[:rid]}", user_params.merge(params))
+      OrdrIn::Order.new(response.body, response.errors)
+    end
+
+    # @param params [Hash]
+    # @option params [String]  :rid Ordr.in's unique restaurant id
+    # @option params [String]  :tray The tray is composed of menu items and
+    #   optional sub-items. A single menu item's format is: [menu item
+    #   id]/[qty],[option id],[option id]... Multiple menu items are joined by a
+    #   +: [menu item id]/[qty]+[menu item id2]/[qty2] For example:
+    #   3270/2+3263/1,3279 Means 2 of menu item 3270 (with no sub options) and 1
+    #   of item num 3263 with sub option 3279.
+    # @option params [String]  :tip tip amount in dollars and cents
+    # @option params [String]  :delivery_date Either ASAP or in the date format
+    #   2 digit month - 2 digit date, i.e. January 21 would be 01-21
+    # @option params [String]  :delivery_time (Required if delivery_date is not
+    #   ASAP) Format is 2 digit hour (24 hour time) and 2 digit minutes, i.e.
+    #   9:30 PM would be 21:30.
+    # @option params [String]  :em
+    # @option params [String]  :password optional.(Optional) If provided a new
+    #   user accont will get created with the above email address.
+    # @option params [String]  :first_name
+    # @option params [String]  :last_name
+    # @option params [String]  :addr
+    # @option params [String]  :city
+    # @option params [String]  :state
+    # @option params [String]  :zip
+    # @option params [String]  :phone
+    # @option params [String]  :card_name
+    # @option params [String]  :card_number
+    # @option params [String]  :card_cvc
+    # @option params [String]  :card_expiry
+    # @option params [String]  :card_bill_addr
+    # @option params [String]  :card_bill_addr2
+    # @option params [String]  :card_bill_city
+    # @option params [String]  :card_bill_state
+    # @option params [String]  :card_bill_zip
+    # @option params [String]  :card_bill_phone
+    def place_guest_order(params)
+      response = OrderRequest.post("/o/#{params[:rid]}", params)
+      OrdrIn::Order.new(response.body, response.errors)
+    end
     private
 
     def user_params(params = {})

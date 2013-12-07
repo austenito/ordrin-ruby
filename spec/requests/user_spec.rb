@@ -141,12 +141,100 @@ describe OrdrIn::User do
     end
   end
 
-  context "#find_all_credit_cards", :vcr, record: :all do
+  context "#find_all_credit_cards", :vcr do
     it "returns credit cards" do
       credit_cards = user.find_all_credit_cards
       credit_cards.count.should == 2
       credit_cards.first.nick.should == "Nyan"
       credit_cards.last.nick.should == "nickname"
+    end
+  end
+
+  context "#place_order", :vcr, record: :all do
+    let(:params) do
+      {
+        rid: 147,
+        tray: "4622236/1,4622238+4622296/1,+4622370/1",
+        tip: "5.05",
+        delivery_date: Time.now.strftime("%m-%d"),
+        delivery_time: "16:00",
+        first_name: "Nyan",
+        last_name: "Cat",
+        addr: "1 Main Street",
+        city: "College Station",
+        state: "TX",
+        zip: "77840",
+        phone: "808-123-4567",
+        card_name: "Nyan Black Card",
+        card_number: "4111111111111111",
+        card_cvc: "123",
+        card_expiry: "02/2016",
+        card_bill_addr: "456 Carroll St.",
+        card_bill_city: "Brooklyn",
+        card_bill_state: "NY",
+        card_bill_zip: "11215",
+        card_bill_phone: "808-123-4567"
+      }
+    end
+
+    context "valid params" do
+      it "places order" do
+        order = user.place_order(params)
+        order.errors?.should be_false
+        order.state.should == "NY"
+      end
+    end
+
+    context "invalid params" do
+      it "doesn't places order" do
+        params.delete(:zip)
+        order = user.place_order(params)
+        order.errors?.should be_true
+        order.errors.msg.should =~ /invalid zip/
+      end
+    end
+  end
+
+  context "#place_guest_order", :vcr do
+    let(:params) do
+      {
+        rid: 147,
+        tray: "4622236/1,4622238+4622296/1",
+        tip: "5.05",
+        delivery_date: Time.now.strftime("%m-%d"),
+        delivery_time: "16:00",
+        first_name: "Nyan",
+        last_name: "Cat",
+        addr: "1 Main Street",
+        city: "College Station",
+        state: "TX",
+        zip: "77840",
+        phone: "808-123-4567",
+        card_name: "Nyan Black Card",
+        card_number: "4111111111111111",
+        card_cvc: "123",
+        card_expiry: "02/2016",
+        card_bill_addr: "456 Carroll St.",
+        card_bill_city: "Brooklyn",
+        card_bill_state: "NY",
+        card_bill_zip: "11215",
+        card_bill_phone: "808-123-4567"
+      }
+    end
+
+    context "valid params" do
+      it "places order" do
+        order = user.place_order(params.merge(em: "nyan@cat.com"))
+        order.errors?.should be_false
+        order.cs_order_id.should == "9999999999"
+      end
+    end
+
+    context "invalid params" do
+      it "doesn't place order" do
+        order = user.place_order(params)
+        order.errors?.should be_true
+      end
     end
   end
 end

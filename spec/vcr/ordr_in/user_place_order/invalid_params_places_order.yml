@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://o-test.ordr.in/o/147
+    body:
+      encoding: UTF-8
+      string: ! '{"rid":147,"tray":"4622236/1,4622238+4622296/1,+4622370/1","tip":"5.05","delivery_date":"ASAP","delivery_time":"ASAP","first_name":"Nyan","last_name":"Cat","addr":"456
+        Carroll St.","city":"Brooklyn","state":"NY","phone":"808-123-4567","card_name":"Nyan
+        Black Card","card_number":"4242424242424242","card_cvc":123,"card_expiry":"02/2016","card_bill_addr":"456
+        Carroll St.","card_bill_city":"Brooklyn","card_bill_state":"NY","card_bill_zip":"11215","card_bill_phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="5e5c6acb1aab86a376c067277688622a07c7de154112e0c345983e6a1cfcced7",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sun, 24 Nov 2013 01:04:15 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '67'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"_err\": 1,\n  \"err_code\": 400,\n  \"_msg\": \"missing/invalid
+        zip\"\n}"
+    http_version: 
+  recorded_at: Sun, 24 Nov 2013 01:04:24 GMT
+recorded_with: VCR 2.7.0

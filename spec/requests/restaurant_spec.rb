@@ -27,8 +27,8 @@ describe OrdrIn::Restaurant do
       restaurant = OrdrIn::Restaurant.new(id: 147)
       delivery_check = restaurant.delivery_check(date_time: "ASAP", address: "1 Main Street",
                                                   zip_code: 77840, city: "College Station")
-      delivery_check.rid = 147
-      delivery_check.meals = [0, 4]
+      delivery_check.rid.should == "147"
+      delivery_check.meals.should == [0, 4]
     end
   end
 
@@ -39,8 +39,8 @@ describe OrdrIn::Restaurant do
       delivery_fee = restaurant.delivery_fee(subtotal: 20.42, tip: 5.05, date_time: "ASAP",
                                              address: "1 Main Street", zip_code: 77840, 
                                              city: "College Station")
-      delivery_fee.rid = 147
-      delivery_fee.tax = 2.01
+      delivery_fee.rid.should == "147"
+      delivery_fee.tax.should == "2.01"
     end
   end
 end

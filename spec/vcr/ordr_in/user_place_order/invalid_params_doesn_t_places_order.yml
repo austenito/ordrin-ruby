@@ -1,0 +1,91 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://o-test.ordr.in/o/142
+    body:
+      encoding: UTF-8
+      string: ! '{"rid":142,"tray":"4621317/1","tip":"5.05","delivery_date":"ASAP","delivery_time":"ASAP","first_name":"Nyan","last_name":"Cat","addr":"1
+        Main Street","city":"College Station","state":"TX","phone":"808-123-4567","card_name":"Nyan
+        Black Card","card_number":"4111111111111111","card_cvc":"123","card_expiry":"02/2016","card_bill_addr":"456
+        Carroll St.","card_bill_city":"Brooklyn","card_bill_state":"NY","card_bill_zip":"11215","card_bill_phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="cf9250530a33fab199734e1c61f466d4c8d158eff49e3036b7fb8780f1c36a2e",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sat, 07 Dec 2013 13:44:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '67'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"_err\": 1,\n  \"err_code\": 400,\n  \"_msg\": \"missing/invalid
+        zip\"\n}"
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 13:44:18 GMT
+- request:
+    method: post
+    uri: https://o-test.ordr.in/o/147
+    body:
+      encoding: UTF-8
+      string: ! '{"rid":147,"tray":"4622236/1,4622238+4622296/1,+4622370/1","tip":"5.05","delivery_date":"12-07","delivery_time":"16:00","first_name":"Nyan","last_name":"Cat","addr":"1
+        Main Street","city":"College Station","state":"TX","phone":"808-123-4567","card_name":"Nyan
+        Black Card","card_number":"4111111111111111","card_cvc":"123","card_expiry":"02/2016","card_bill_addr":"456
+        Carroll St.","card_bill_city":"Brooklyn","card_bill_state":"NY","card_bill_zip":"11215","card_bill_phone":"808-123-4567"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      X-Naama-Authentication:
+      - username="austen.dev+ordrin@gmail.com", response="5e5c6acb1aab86a376c067277688622a07c7de154112e0c345983e6a1cfcced7",
+        version="1"
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sat, 07 Dec 2013 14:33:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '67'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"_err\": 1,\n  \"err_code\": 400,\n  \"_msg\": \"missing/invalid
+        zip\"\n}"
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 14:33:32 GMT
+recorded_with: VCR 2.7.0

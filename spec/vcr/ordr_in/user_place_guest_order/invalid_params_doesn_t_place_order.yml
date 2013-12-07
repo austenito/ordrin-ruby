@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://o-test.ordr.in/o/147
+    body:
+      encoding: UTF-8
+      string: ! '{"rid":147,"tray":"4622236/1,4622238+4622296/1","tip":"5.05","delivery_date":"12-07","delivery_time":"16:00","first_name":"Nyan","last_name":"Cat","addr":"1
+        Main Street","city":"College Station","state":"TX","zip":"77840","phone":"808-123-4567","card_name":"Nyan
+        Black Card","card_number":"4111111111111111","card_cvc":"123","card_expiry":"02/2016","card_bill_addr":"456
+        Carroll St.","card_bill_city":"Brooklyn","card_bill_state":"NY","card_bill_zip":"11215","card_bill_phone":"808-123-4567","em":"foo@bar.com"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      X-Naama-Client-Authentication:
+      - id=O5jirm3MM5XLLT3BkY80dPo_AdIIm1CBGTJPRHADoJU, version=1
+      Content-Type:
+      - application/json
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx/1.0.15
+      Date:
+      - Sat, 07 Dec 2013 14:32:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - Express
+      Content-Length:
+      - '75'
+    body:
+      encoding: UTF-8
+      string: ! "{\n  \"err_code\": 400,\n  \"_err\": 1,\n  \"_msg\": \"Gateway Rejected:
+        duplicate\"\n}"
+    http_version: 
+  recorded_at: Sat, 07 Dec 2013 14:32:07 GMT
+recorded_with: VCR 2.7.0
